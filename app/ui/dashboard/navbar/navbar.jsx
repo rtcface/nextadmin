@@ -1,6 +1,10 @@
+import styles from './navbar.module.css'
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div className={styles.container}>
+      <span className={styles.title}>Sistema de contrataciones</span>
+    
+    </div>
   )
 }
 export default Navbar

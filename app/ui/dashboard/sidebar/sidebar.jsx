@@ -1,25 +1,40 @@
 import MenuLink from './menuLink/MenuLink'
 import styles from './sidebar.module.css'
-import { MdDashboard, MdPerson, MdSupervisedUserCircle } from 'react-icons/md'
+import Image from 'next/image'
+import { MdAssignmentReturned } from 'react-icons/md'
+import { FcPlanner } from "react-icons/fc";
+import { GiBuyCard } from "react-icons/gi";
+import { FaFileContract,FaPersonRunning } from "react-icons/fa6";
+
 
 const menuItems = [
   {
-    title: "Pages",
+    title: "Etapas",
     list: [
       {
-        title: "Dashboard",
+        title: "Planeación",
         path: "/dashboard",
-        icon: <MdDashboard/>
+        icon: <FcPlanner/>
       },
       {
-        title: "Users",
-        path: "/users",
-        icon: <MdPerson/>
+        title: "Licitación",
+        path: "/dashboard/users",
+        icon: <GiBuyCard/>
       },
       {
-        title: "Declaraciones",
-        path: "/declaraciones",
-        icon: <MdSupervisedUserCircle/>
+        title: "Adjudicación",
+        path: "/dashboard/declaraciones",
+        icon: <MdAssignmentReturned/>
+      },
+      {
+        title: "Contrato",
+        path: "/dashboard/contrato",
+        icon: <FaFileContract/>
+      },
+      {
+        title: "Implementación",
+        path: "/dashboard/implementacion",
+        icon: <FaPersonRunning/>
       }
     ]    
   }
@@ -28,11 +43,18 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <div className={styles.container}>
-      <ul>
+      <div className={styles.user}>
+        <Image src="/noavatar.png" alt="avatar" width="50" height="50" className={styles.userImage}/>
+        <div className={styles.userDetail}>
+          <span className={styles.username}>Ramiro Tepehua</span>
+          <span  className={styles.usertitle}>Admin</span>
+        </div>
+      </div>
+      <ul className={styles.list}>
         {
           menuItems.map((item) => (
             <li key={item.title}>
-              <span className={styles.item}>{item.title}</span>
+              <span className={styles.cat}>{item.title}</span>
               {
                 item.list.map((subItem) => (
                   <MenuLink key={subItem.title} item={subItem}/>

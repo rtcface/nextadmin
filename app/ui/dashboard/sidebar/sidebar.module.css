@@ -1,0 +1,41 @@
+.container{
+    position: sticky;
+    top: 40px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.user{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+    align-items: center;   
+}
+.userImage{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.userDetail{
+display: flex;
+flex-direction: column;
+}
+
+.username{
+font-weight: bold;
+}
+.usertitle{
+font-size: 12px;
+font-weight: 500;
+color: var(--textSoft);
+}
+
+.list{
+    list-style: none;
+}
+
+.cat{
+    margin: 10px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--textSoft);
+}
