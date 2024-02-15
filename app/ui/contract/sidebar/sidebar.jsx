@@ -1,6 +1,5 @@
-import MenuLink from './menuLink/MenuLink'
+import MenuLink from '../../share/menuLink/MenuLink'
 import styles from './sidebar.module.css'
-import Image from 'next/image'
 import { MdAssignmentReturned } from 'react-icons/md'
 import { FcPlanner } from "react-icons/fc";
 import { GiBuyCard } from "react-icons/gi";
@@ -10,7 +9,7 @@ import { FaFileContract,FaPersonRunning } from "react-icons/fa6";
 const menuItems = [
   {
     title: "Etapas",
-    list: [
+    list: [      
       {
         title: "Planeación",
         path: "/dashboard",
@@ -43,13 +42,7 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.user}>
-        <Image src="/noavatar.png" alt="avatar" width="50" height="50" className={styles.userImage}/>
-        <div className={styles.userDetail}>
-          <span className={styles.username}>Ramiro Tepehua</span>
-          <span  className={styles.usertitle}>Admin</span>
-        </div>
-      </div>
+      
       <ul className={styles.list}>
         {
           menuItems.map((item) => (

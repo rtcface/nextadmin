@@ -1,6 +1,6 @@
 const Declaraciones = () => {
   return (
-    <div>Declaraciones</div>
+    <div>Contrataciones</div>
   )
 }
 export default Declaraciones
